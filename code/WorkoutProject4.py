@@ -2,9 +2,9 @@
 # EMAIL: shanibt@uci.edu
 # STUDENT ID: 16539648
 
-import webapi as WA
-import visual
-import fileIO
+import webAPI as WA
+import visual as visual
+import fileIO as fileIO
 
 def main_ui():
     # Collect input from User
@@ -24,7 +24,7 @@ def main_ui():
         visual.create_scatterplot(date, magnitude, visualname)
         print('Visual created!')
     elif len(magnitude) == 0:  #If there were no earthquakes that day
-        print('There were no earthquakes recorded on this day!')
+        print('There were no earthquakes in California recorded on this day!')
         pass
 
 
