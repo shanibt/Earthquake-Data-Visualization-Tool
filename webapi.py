@@ -13,5 +13,4 @@ def get_CAearthquake_data(day:str):
     res_data = res.read()
     res.close()
     api_data = json.loads(res_data)
-    print('Done!')
     return api_data
