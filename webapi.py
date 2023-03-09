@@ -5,7 +5,7 @@
 import urllib.request
 import json
 
-def get_earthquake_data(start:str, end:str):
+def get_CAearthquake_data(start:str, end:str):
     print('Opening and Reading Data....')
     url = 'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=' + start + '&endtime=' + end
     req = urllib.request.Request(url)

@@ -3,21 +3,8 @@
 # STUDENT ID: 16539648
 
 import webapi as WA
+import visual
 import json
-
-def sort_data(data):
-    mag_list = []
-    loc_list = []
-
-    ind = 0
-    while ind != len(data['features']):
-        cali = data['features'][ind]['properties']['place']
-        if 'CA' in str(cali):
-            mag_list.append(data['features'][ind]['properties']['mag'])
-            loc_list.append(cali)
-        ind += 1
-    return mag_list
-
 
 
 if __name__ == "__main__":
@@ -36,4 +23,4 @@ if __name__ == "__main__":
     json.dump(earthquake, out_file)
     out_file.close
 
-    sort_data(earthquake)
+    visual.sort_data(earthquake)
