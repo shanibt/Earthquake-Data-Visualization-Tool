@@ -8,19 +8,22 @@ import json
 
 
 if __name__ == "__main__":
-    # start_date = input('Enter start date (YYYY-MM-DD): ')
-    # end_date = input('Enter end date (YYYY-MM-DD): ')
+    # date = input('Enter date (YYYY-MM-DD): ')
     # filename = input('Filename to save Earthquake Data: ')
     # visualname = input('Filename to save the graphical visual of the Earthquake Data: ')
 
-    start_date = '2023-01-09'
-    end_date = '2023-01-10'
+    date = '2023-03-04'
     filename = 'quake'
+    visualname = 'graph'
 
-    earthquake = WA.get_CAearthquake_data(start_date, end_date)
+    earthquake = WA.get_CAearthquake_data(date)
 
     out_file = open(filename, 'w')
     json.dump(earthquake, out_file)
     out_file.close
 
-    visual.sort_data(earthquake)
+    magnitude = visual.sort_data(earthquake)
+    if len(magnitude) != 0:
+        visual.create_scatterplot(date, magnitude, visualname)
+    else:
+        pass
