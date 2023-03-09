@@ -2,7 +2,8 @@
 # EMAIL: shanibt@uci.edu
 # STUDENT ID: 16539648
 
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+
 
 def sort_data(data):
     mag_list = []
@@ -17,6 +18,7 @@ def sort_data(data):
         ind += 1
     return mag_list
 
+
 def create_scatterplot(day, mag_lst, visualfile):
     x = range(len(mag_lst))
     plt.scatter(x, mag_lst)
@@ -24,4 +26,3 @@ def create_scatterplot(day, mag_lst, visualfile):
     plt.ylabel('Magnitude')
     plt.title(f"Scatter Plot of the Earthquake's Magnitudes on {day}")
     plt.savefig(visualfile)
-

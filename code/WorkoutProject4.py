@@ -7,6 +7,7 @@ import visual
 import fileIO
 import DateChecker
 
+
 def main_ui():
     # Collect input from User
     date = input('Enter date (YYYY-MM-DD): ')
@@ -14,7 +15,7 @@ def main_ui():
     filename = input('Filename to save Earthquake Data: ')
     visualname = input('Filename to save the graphical visual of the Earthquake Data: ')
 
-    # Extract data from Earthquake API 
+    # Extract data from Earthquake API
     earthquake = WA.get_CAearthquake_data(date)
 
     # Upload the data into a file
@@ -22,10 +23,10 @@ def main_ui():
 
     # Get magnitude list of all the California Earthquakes on that day
     magnitude = visual.sort_data(earthquake)
-    if len(magnitude) != 0:  #If there were earthquakes that day
+    if len(magnitude) != 0:  # If there were earthquakes that day
         visual.create_scatterplot(date, magnitude, visualname)
         print('Visual created!')
-    elif len(magnitude) == 0:  #If there were no earthquakes that day
+    elif len(magnitude) == 0:  # If there were no earthquakes that day
         print('There were no earthquakes in California recorded on this day!')
         pass
 
