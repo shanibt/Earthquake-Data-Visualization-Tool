@@ -3,12 +3,14 @@
 # STUDENT ID: 16539648
 
 import webAPI as WA
-import visual as visual
-import fileIO as fileIO
+import visual
+import fileIO
+import DateChecker
 
 def main_ui():
     # Collect input from User
     date = input('Enter date (YYYY-MM-DD): ')
+    DateChecker.check_date(date)
     filename = input('Filename to save Earthquake Data: ')
     visualname = input('Filename to save the graphical visual of the Earthquake Data: ')
 
