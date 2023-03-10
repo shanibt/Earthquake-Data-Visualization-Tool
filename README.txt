@@ -28,3 +28,8 @@ DateChecker.py
     validates that the year, month, and day are possible
     ad individual values and then together.
 
+WorkoutProject4-16539648.png
+    Scatterplot that shows the different magnitudes of the
+    number of earthquakes that happened in California on
+    2023-02-09. X-axis is the number of earthquake and Y-axis
+    is the magnitude. 
