@@ -2,24 +2,42 @@
 # EMAIL: shanibt@uci.edu
 # STUDENT ID: 16539648
 
-import webAPI as WA
+'''
+Launches the WP4 to collect input from User to extract data
+from an earthquake API and produce a scatter plot based on the
+magnitudes of the earthquakes on the given date
+'''
+
+import web_api as WA
 import visual
-import fileIO
-import DateChecker
+import file_io
+import data_checker
 
 
 def main_ui():
-    # Collect input from User
+    '''
+    Main User Interface
+    Collects the input from user and checks to make sure the
+    date given is valid. Use the input to extract data from
+    the Earthquake API and upload the data into a file, under
+    the given file name. From the data extracted from the
+    Earthquake API, check and add the magnitudes of earthquakes
+    that happened in California on the date given.
+    '''
+    # Collect input from user
     date = input('Enter date (YYYY-MM-DD): ')
-    DateChecker.check_date(date)
+    if not data_checker.check_date(date):
+        print('Error: Invalid Date -- Rerun the program if you wish')
+        exit(1)
     filename = input('Filename to save Earthquake Data: ')
-    visualname = input('Filename to save the graphical visual of the Earthquake Data: ')
+    visualname = input('Filename to save the graphical '
+                       'visual of the Earthquake Data: ')
 
     # Extract data from Earthquake API
-    earthquake = WA.get_CAearthquake_data(date)
+    earthquake = WA.get_ca_earthquake_data(date)
 
     # Upload the data into a file
-    fileIO.file_upload(earthquake, filename)
+    file_io.file_upload(earthquake, filename)
 
     # Get magnitude list of all the California Earthquakes on that day
     magnitude = visual.sort_data(earthquake)
@@ -28,7 +46,6 @@ def main_ui():
         print('Visual created!')
     elif len(magnitude) == 0:  # If there were no earthquakes that day
         print('There were no earthquakes in California recorded on this day!')
-        pass
 
 
 if __name__ == "__main__":
