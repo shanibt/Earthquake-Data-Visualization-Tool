@@ -1,4 +1,4 @@
-ICS32 Workout Project 4: Visualizing Web Information
+Visualizing Web Information
 
 Main Purpose: To create a scatterplot of the magnitudes of the different
 earthquakes that took place on that date given by the user. 
@@ -27,9 +27,3 @@ DateChecker.py
     Splits the date string into 3 different parts and
     validates that the year, month, and day are possible
     ad individual values and then together.
-
-WorkoutProject4-16539648.png
-    Scatterplot that shows the different magnitudes of the
-    number of earthquakes that happened in California on
-    2023-02-09. X-axis is the number of earthquake and Y-axis
-    is the magnitude. 
