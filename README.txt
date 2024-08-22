@@ -1,4 +1,4 @@
-#Visualizing Web Information
+# Visualizing Web Information
 
 Main Purpose: To create a scatterplot of the magnitudes of the different
 earthquakes that took place on that date given by the user. 
