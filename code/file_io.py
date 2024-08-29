@@ -1,7 +1,3 @@
-# NAME: Shani Trieu
-# EMAIL: shanibt@uci.edu
-# STUDENT ID: 16539648
-
 '''
 Uploads data extracted from Earthquake API onto
 file under the name given by the user.

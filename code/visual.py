@@ -1,7 +1,3 @@
-# NAME: Shani Trieu
-# EMAIL: shanibt@uci.edu
-# STUDENT ID: 16539648
-
 '''
 Sort the extracted data for only California magnitudes and
 create and save the scatterplot that depicts the varying

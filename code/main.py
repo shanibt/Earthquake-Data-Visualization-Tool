@@ -1,9 +1,5 @@
-# NAME: Shani Trieu
-# EMAIL: shanibt@uci.edu
-# STUDENT ID: 16539648
-
 '''
-Launches the WP4 to collect input from User to extract data
+Launches the main.py to collect input from User to extract data
 from an earthquake API and produce a scatter plot based on the
 magnitudes of the earthquakes on the given date
 '''

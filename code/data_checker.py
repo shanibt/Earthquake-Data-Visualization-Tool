@@ -1,7 +1,3 @@
-# NAME: Shani Trieu
-# EMAIL: shanibt@uci.edu
-# STUDENT ID: 16539648
-
 '''
 Validity checker for the date given by user
 '''
